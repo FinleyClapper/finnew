@@ -39,24 +39,15 @@ def price_change(quote):
         return f'+${da} (%{percent})'
     return f'-${da} (%{percent})'
 def format_market_cap(value):
-    # Ensure value is a float or int
     value = value * 1000000
     if not value or value == 0:
         return "N/A"
-    
-    # Trillions
     if value >= 1_000_000_000_000:
         return f"{value / 1_000_000_000_000:.2f}T"
-    
-    # Billions
     elif value >= 1_000_000_000:
         return f"{value / 1_000_000_000:.2f}B"
-    
-    # Millions
     elif value >= 1_000_000:
         return f"{value / 1_000_000:.2f}M"
-    
-    # Return as-is if smaller than a million
     return str(value)
 @app.route("/api/stocks/info")
 def company_info():
