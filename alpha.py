@@ -54,8 +54,6 @@ def format_market_cap(value):
         return f"{value / 1_000_000:.2f}M"
     return str(value)
 @app.route("/api/stocks/info")
-@app.route("/api/stocks/info")
-@app.route("/api/stocks/info")
 def company_info():
     symbol = request.args.get("symbol", "").strip().upper()
     if not symbol:

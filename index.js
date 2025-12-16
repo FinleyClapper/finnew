@@ -117,8 +117,8 @@ async function renderNews(symbol) {
         <a href="${article.url}" target="_blank" class="block p-5 hover:bg-slate-700/30 transition border-b border-slate-700/50 last:border-0 group">
             <div class="flex gap-4">
                 <img src="${article.image || 'https://via.placeholder.com/80'}" 
-                     class="w-16 h-16 rounded-md object-cover bg-slate-900 flex-shrink-0 shadow-lg border border-slate-700" 
-                     onerror="this.src='https://via.placeholder.com/80'">
+                    class="w-16 h-16 rounded-md object-cover bg-slate-900 flex-shrink-0 shadow-lg border border-slate-700" 
+                    onerror="this.src='https://via.placeholder.com/80'">
                 
                 <div class="flex-grow overflow-hidden">
                     <div class="flex justify-between items-center mb-1">
@@ -141,7 +141,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentSymbol = "AAPL";
     
     console.log("Page loaded. Initializing dashboard for:", currentSymbol);
-    
-    // Call your function to fetch data and update the UI
     handleSelect(currentSymbol);
 });
